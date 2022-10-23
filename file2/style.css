@@ -1,0 +1,114 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.container
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.container ul
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: 700ms;
+}
+
+.container ul li
+{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.container ul li img
+{
+    display: block;
+    inset: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+}
+
+.slide
+{
+    opacity: 0;
+}
+
+.slide
+{
+    opacity: 1;
+}
+
+.carouselbutton
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(255,255,255,0.6);
+    padding-inline: 10px;
+    border: none;
+    z-index: 3;
+}
+
+.carouselbutton:hover,.carouselbutton:focus
+{
+    background-color: rgba(0,0,0,0.3);
+    color: rgba(255,255,255,1);
+}
+
+.carouselbutton:focus
+{
+    border: 1px solid black;
+}
+
+.next
+{
+    right: 1rem;
+}
+.prev
+{
+    left: 1rem;
+}
+
+.dotscontainer
+{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}   
+
+.dot
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border:1px solid white;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.dot[data-active-button]
+{
+    background-color: black;
+}
